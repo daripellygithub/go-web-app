@@ -1,0 +1,17 @@
+replicacount: 1
+
+image:
+  repository: daripellydocker/go-web-app
+  tag: "v1"
+  pullpolicy: IfNotPresent
+
+  ingress:
+    enabled: false
+    classname: ""
+    annotations: {}
+
+    hosts:
+      - host: chart-example.local
+        paths:
+          - path: /
+            pathType: ImplementationSpecific
